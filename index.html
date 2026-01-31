@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Our Date Adventure 💕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-slider">
+        <div class="bg-slide active" style="background-image: url('./WhatsApp Image 2026-01-31 at 22.05.49.jpeg');"></div>
+        <div class="bg-slide" style="background-image: url('./WhatsApp Image 2026-01-31 at 22.05.50.jpeg');"></div>
+        <div class="bg-slide" style="background-image: url('./WhatsApp Image 2026-01-31 at 22.10.57.jpeg');"></div>
+        <div class="bg-slide" style="background-image: url('./WhatsApp Image 2026-01-31 at 22.10.58.jpeg');"></div>
+    </div>
+    
+    <div class="overlay"></div>
+    
+    <div class="container">
+        <header class="header">
+            <h1 class="title">✨ Kemana Kita Pergi Besok? Dinda Nur Akmalia ✨</h1>
+            <p class="subtitle">Pilihan mu nentuin kita kemana</p>
+        </header>
+
+        <div class="cards-container">
+            <!-- Option A -->
+            <div class="card" data-option="a">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-icon">🌆</div>
+                        <h2 class="card-title">Option A</h2>
+                        <p class="card-hint">Romantic Evening</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Cafe Senja</h3>
+                        <div class="card-emoji">☕✨</div>
+                        <p class="card-description">
+                            Liat citylight di cafe dan nikmatin waktu bersama
+                        </p>
+                        <button class="choose-btn" onclick="selectDate('a')">
+                            Choose This! 💖
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Option B -->
+            <div class="card" data-option="b">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-icon">🎨</div>
+                        <h2 class="card-title">Option B</h2>
+                        <p class="card-hint">Artistic Journey</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Museum & Photobooth</h3>
+                        <div class="card-emoji">🖼️📸</div>
+                        <p class="card-description">
+                            Kita ke museum jalan jalan lalu ke photobooth
+                        </p>
+                        <button class="choose-btn" onclick="selectDate('b')">
+                            Choose This! 💖
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Option C -->
+            <div class="card" data-option="c">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-icon">🎮</div>
+                        <h2 class="card-title">Option C</h2>
+                        <p class="card-hint">Fun & Games</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Timezone</h3>
+                        <div class="card-emoji">🎯🕹️</div>
+                        <p class="card-description">
+                            Main di Timezone!
+                        </p>
+                        <button class="choose-btn" onclick="selectDate('c')">
+                            Choose This! 💖
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hint-text">
+            <p>💡 Klik kartu untuk melihat detail pilihan date!</p>
+        </div>
+    </div>
+
+    <!-- Selection Modal -->
+    <div class="modal" id="selectionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Perfect Choice! 🎉</h2>
+            </div>
+            <div class="modal-body">
+                <div id="modalIcon" class="modal-icon"></div>
+                <h3 id="modalTitle"></h3>
+                <p id="modalMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn confirm-btn" onclick="confirmSelection()">
+                    Yes, Let's Go! 💕
+                </button>
+                <button class="modal-btn cancel-btn" onclick="closeModal()">
+                    Wait, Let Me Think Again
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Celebration -->
+    <canvas id="confetti"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
